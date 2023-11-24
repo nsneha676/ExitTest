@@ -1,0 +1,90 @@
+<div class="signup-form">
+        <div>
+            <div class="container">
+                <div class="respond text-center">
+                    <h1>Create Account</h1>
+                    <form #signupForm="ngForm" (ngSubmit)="adduser(signupForm.value)" class="comment-form">                       
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i> </span>
+
+                                <input ngModel #FirstName="ngModel" type="FirstName" name="FirstName" id="FirstName" class="form-control"
+                                    placeholder="Enter Your FirstName" required>
+                                <div *ngIf="checkName"> First Name Required </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class=" input-group-addon"><i class="fa fa-user"></i></span>
+                                <input ngModel #LastName="ngModel" type="LastName" name="LastName" id="LastName" class="form-control"
+                                    placeholder="Enter Your LastName" required>
+                                <div *ngIf="checkName">
+                                    Last Name Required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-paper-plane"></i>
+                                </span>
+
+                                <input ngModel #Email="ngModel" type="email" name="Email" id="Email" class="form-control"
+                                    placeholder="Enter Your Email Address" required>
+                                <div *ngIf="checkEmail"> Email required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+
+                                <input ngModel #Password="ngModel" type="password" name="Password" id="Password" class="form-control"
+                                    placeholder="Enter Password" required>
+                                <div *ngIf="checkPassword"> Password required and contains atleast 1 capital letter 1 special character and 1 alphanumeric character </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class=" input-group-addon"><i class="fa fa-phone"></i></span>
+
+                                <input ngModel #PhoneNumber="ngModel" type="phoneNumber" name="PhoneNumber" id="PhoneNumber"
+                                    class="form-control" placeholder="Enter Your Contact Number" required>
+                                <div *ngIf="checkPhoneNumber"> Phone number required </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"></span>
+
+                                <input ngModel #Image="ngModel" type="file" name="Image" id="Image" class="form-control"
+                                    placeholder="Upload Your Profile Image"required>
+                                <div *ngIf="checkImage" class="bg-danger">No Image is uploaded </div>
+                            </div>
+                        </div>
+                      
+                        <div class="form-group">
+                            <div class="input-group">
+                                <select  id="Country" name="Country" class="form-control" ngModel>
+                                    <option value="" disabled selected>Select your Country</option>
+                                    <option value="India">India</option>
+                                    <option value="USA">USA</option>
+                                    <option value="England">England</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="France">France</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--</div>-->
+                        <div class="row mt20">
+                            <div class="col-md-12">
+                                    <input type="submit" class="btn btn-lg btn-success btn-block"
+                                         value="Sign Up" [disabled]="signupForm.invalid"  >
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div><!-- /.respond -->
+            </div>
+        </div>
+    </div>

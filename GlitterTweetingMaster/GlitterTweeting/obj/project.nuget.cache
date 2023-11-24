@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XAoZ5Pc92k/CQC3KfLZPKIWq8cqrMylKZJnprPIIY51UF3IfwcK4hljoUC7SQYZD5m2NOOkVbNn77t2BQavepw==",
+  "success": true,
+  "projectFilePath": "D:\\New folder\\neha-singh\\GlitterExitTest\\GlitterTweetingMaster\\GlitterTweeting\\GlitterTweeting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nehasingh03\\.nuget\\packages\\microsoft.codedom.providers.dotnetcompilerplatform\\2.0.0\\microsoft.codedom.providers.dotnetcompilerplatform.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

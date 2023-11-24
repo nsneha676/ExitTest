@@ -1,0 +1,31 @@
+<div *ngIf="!loggedIn">
+  You should be logged in to view this page.....
+  <a routerLink="/login" routerLinkActive="active-link">Login</a>
+</div>
+
+<div *ngIf="loggedIn">
+
+
+  <app-dashboard></app-dashboard>
+  
+  <div *ngIf="following">
+<br>
+    <div *ngFor="let user of following">
+
+      <div class="col-md-3 offset-md-4">
+        <div class="card mb-3" style="max-width: 24rem;">
+          <div class="card-header">User Information</div>
+          <div class="card-body">
+            <p class="card-text">Email:{{user.Email}} <br>
+              FirstName: {{user.FirstName}}<br>
+              LastName: {{user.LastName}}
+
+            </p>
+            <button class="btn btn-danger" (click)="unFollow(user.ID)">Unfollow</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
